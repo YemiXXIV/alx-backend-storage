@@ -2,10 +2,12 @@
 """
 get log of nginx from mongodb
 """
+
 from pymongo import MongoClient
 
 
 METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+
 
 def log_stats(mongo_collection):
     """
@@ -13,6 +15,7 @@ def log_stats(mongo_collection):
     """
     total_logs = mongo_collection.count_documents({})
     print(f"{total_logs} logs")
+
 
     print("Methods:")
 
