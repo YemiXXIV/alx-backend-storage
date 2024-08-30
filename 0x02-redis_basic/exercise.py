@@ -52,7 +52,7 @@ class Cache():
     """
     write to redis
     """
-    def __init__(self) -> None:
+    def __init__(self):
         """
         initialize redis in class
         """
@@ -65,7 +65,7 @@ class Cache():
         """
         get uuid key and save data
         """
-        key = str(uuid4())
+        key = str(uuid.uuid4())
         self._redis.set(key, data)
         return key
 
